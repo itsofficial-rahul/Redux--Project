@@ -1,10 +1,10 @@
-export const incriment = () => {
-    return {
-        type: "INCREMET"
+export const incriment =()=>{
+    return{
+        type:"INCRIMENT"
     }
 }
-export const Decriment = () => {
-    return {
-        type: "DINCREMENT"
+export const decriment =()=>{
+    return{
+        type:"DECRIMENT"
     }
 }

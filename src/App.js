@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { Decriment, incriment } from './Action/Action';
-
-function App() {
-  const mystate = useSelector((state) => state.changeTheNumber);
+import {incriment,decriment} from"./Action/Action";
+import{useSelector,useDispatch} from"react-redux";
+function App()
+{
+  const mystate=useSelector((state)=>state.changeNumber)
   const dispatch=useDispatch();
-  return (
+  return(
     <div>
-     <h1>react with redux</h1>
-     <div className='btn'>
-       <button onClick={()=>dispatch(incriment())}>add</button>
-       <div style={{color:"red",backgroundColor:"black" ,width:"40px" ,margin:"20px"}} >
-       <h1>{mystate}</h1>
-       </div>
-      
-       <button onClick={()=>dispatch(Decriment())}>remove</button>
-     </div >
-    </div >
+      <h1>React with redux </h1>
+      <div className='btn'>
+        <button onClick={()=>dispatch(incriment())}>add</button>
+          <h1>{mystate}</h1>
+        <button onClick={()=>dispatch(decriment())}>remove</button>
+      </div>
+    </div>
   )
 }
-
 export default App;
 

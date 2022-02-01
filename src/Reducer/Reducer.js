@@ -1,12 +1,9 @@
-const intialstate=0;
-
-const changeTheNumber = (state = intialstate, action) => {
+const intialState = 0;
+const changeNumber = (state = intialState, action) => {
     switch (action.type) {
-        case "INCREMET": return state+1;
-        case "DINCREMENT": return state -1;
-            
-    
+        case "INCRIMENT": return state + 1
+        case "DECRIMENT": return state - 1;
         default: return state;
     }
 }
-export default changeTheNumber;
+export default changeNumber;
